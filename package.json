@@ -1,0 +1,27 @@
+{
+  "name": "flood-server",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.5"
+  },
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "start:push": "APNS_MODE=simulator node src/server.js",
+    "test": "NODE_ENV=test node --test",
+    "test:watch": "NODE_ENV=test node --test --watch",
+    "provision": "node scripts/provision-device.js",
+    "provision:firmware": "node scripts/provision-device.js --firmware",
+    "seed": "node scripts/seed-demo.js",
+    "reset": "node scripts/seed-demo.js --reset",
+    "feed": "node scripts/live-feed.js"
+  },
+  "dependencies": {
+    "fastify": "^5.2.0",
+    "fastify-plugin": "^6.0.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

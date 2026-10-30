@@ -1,0 +1,18 @@
+node_modules/
+*.db
+*.db-wal
+*.db-shm
+.env
+
+# Xcode
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+.DS_Store
+
+# Device keys the live feed re-provisions for itself.
+.live-keys.json
+
+# The real sensor's id and key (npm run provision:firmware).
+firmware/flood/device_identity.h
